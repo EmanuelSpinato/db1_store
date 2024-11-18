@@ -1,0 +1,207 @@
+/* Reset e Estrutura Básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Cabeçalho do Carrinho */
+.dashboard-header {
+    background-color: #0055d4;
+    color: #fff;
+    padding: 1em 0;
+    border-bottom: 3px solid #003a8c;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.dashboard-logo {
+    width: 150px;
+    height: auto;
+}
+
+.dashboard-navbar {
+    display: flex;
+    gap: 1em;
+}
+
+.dashboard-navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dashboard-navbar a:hover {
+    background-color: #003a8c;
+}
+
+/* Estilização do Carrinho */
+.cart-section {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.cart-section h1 {
+    font-size: 2em;
+    color: #0057d9;
+    margin-bottom: 1em;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+    padding-left: 1em;
+    text-align: left;
+}
+
+.cart-item-details h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0.5em 0;
+}
+
+.quantity-controls button {
+    background: #0057d9;
+    color: #fff;
+    border: none;
+    padding: 0.3em 0.6em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item-price {
+    font-size: 1em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Botão Remover */
+.remove-button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+.remove-button:hover {
+    background-color: #c9302c;
+}
+
+/* Total e Finalizar */
+.cart-total {
+    text-align: center;
+    font-size: 1.5em;
+    color: #0057d9;
+    margin-top: 1em;
+}
+
+.finalize-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.8em 2em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.finalize-button:hover {
+    background-color: #218838;
+}
+
+/* Animação de Compra Concluída */
+.purchase-complete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 10px;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.purchase-complete.hidden {
+    display: none;
+}
+
+.purchase-complete.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .dashboard-navbar {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+    }
+}

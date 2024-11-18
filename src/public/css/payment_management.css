@@ -1,0 +1,171 @@
+/* Reset e Estrutura Básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 1em 0;
+}
+
+/* Cabeçalho */
+.dashboard-header {
+    background-color: #0055d4;
+    color: #fff;
+    padding: 1em 0;
+    border-bottom: 3px solid #003a8c;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-logo {
+    width: 150px;
+    height: auto;
+}
+
+.dashboard-navbar {
+    display: flex;
+    gap: 1em;
+}
+
+.dashboard-navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dashboard-navbar a:hover {
+    background-color: #003a8c;
+}
+
+/* Gerenciamento de Pagamento */
+.payment-management-section {
+    padding: 2em 0;
+}
+
+.payment-management-section h2 {
+    text-align: center;
+    color: #0057d9;
+    margin-bottom: 1em;
+}
+
+.payment-list, .add-payment-method {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.payment-list h3, .add-payment-method h3 {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.payment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.payment-card:last-child {
+    border-bottom: none;
+}
+
+.remove-button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: #c9302c;
+}
+
+/* Formulário de Novo Cartão */
+.add-payment-method label {
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5em;
+}
+
+.add-payment-method input {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-button {
+    background-color: #0057d9;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #003a8c;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 2em;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 0.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .dashboard-navbar {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Formas de Pagamento - DB1 Store</title>
+    <link rel="stylesheet" href="css/payment_management.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo DB1 Store" class="dashboard-logo">
+            <nav class="dashboard-navbar">
+                <a href="dashboard.html">Início</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gerenciar Formas de Pagamento -->
+    <section class="payment-management-section">
+        <div class="container">
+            <h2>Gerenciar Formas de Pagamento</h2>
+
+            <!-- Lista de Formas de Pagamento -->
+            <div class="payment-list">
+                <h3>Formas de Pagamento Cadastradas</h3>
+                <div class="payment-card">
+                    <p><strong>Cartão:</strong> Mastercard com final 1234</p>
+                    <button class="remove-button" onclick="removePaymentMethod()">Remover</button>
+                </div>
+                <div class="payment-card">
+                    <p><strong>Cartão:</strong> Visa com final 5678</p>
+                    <button class="remove-button" onclick="removePaymentMethod()">Remover</button>
+                </div>
+            </div>
+
+            <!-- Adicionar Nova Forma de Pagamento -->
+            <div class="add-payment-method">
+                <h3>Adicionar Nova Forma de Pagamento</h3>
+                <form id="addPaymentForm">
+                    <label for="cardName">Nome no Cartão</label>
+                    <input type="text" id="cardName" required>
+
+                    <label for="cardNumber">Número do Cartão</label>
+                    <input type="text" id="cardNumber" required>
+
+                    <label for="expiryDate">Data de Validade</label>
+                    <input type="text" id="expiryDate" placeholder="MM/AA" required>
+
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" required>
+
+                    <button type="submit" class="add-button">Adicionar Cartão</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DB1 Store. Todos os direitos reservados.</p>
+            <nav class="footer-links">
+                <a href="#">Contato</a>
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/payment_management.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Pedidos - DB1 Store</title>
+    <link rel="stylesheet" href="css/order_history.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo DB1 Store" class="dashboard-logo">
+            <nav class="dashboard-navbar">
+                <a href="dashboard.html">Início</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Histórico de Pedidos -->
+    <section class="order-history-section">
+        <div class="container">
+            <h2>Histórico de Pedidos</h2>
+            <div class="order-list">
+                <!-- Exemplo de pedido -->
+                <div class="order-item">
+                    <p><strong>Pedido #00123</strong> - <span class="order-date">25/10/2024</span></p>
+                    <p><strong>Status:</strong> Entregue</p>
+                    <p><strong>Total:</strong> R$ 2.499,00</p>
+                    <button class="view-details-button" onclick="viewOrderDetails(123)">Ver Detalhes</button>
+                </div>
+                <div class="order-item">
+                    <p><strong>Pedido #00124</strong> - <span class="order-date">15/10/2024</span></p>
+                    <p><strong>Status:</strong> Em Trânsito</p>
+                    <p><strong>Total:</strong> R$ 1.750,00</p>
+                    <button class="view-details-button" onclick="viewOrderDetails(124)">Ver Detalhes</button>
+                </div>
+                <!-- Outros pedidos podem ser listados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Detalhes do Pedido -->
+    <div id="orderDetailsModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>Detalhes do Pedido #<span id="orderId"></span></h3>
+            <p><strong>Data do Pedido:</strong> <span id="orderDate"></span></p>
+            <p><strong>Status:</strong> <span id="orderStatus"></span></p>
+            <p><strong>Total:</strong> R$ <span id="orderTotal"></span></p>
+            <h4>Itens:</h4>
+            <ul id="orderItemsList">
+                <!-- Lista de itens será preenchida dinamicamente -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DB1 Store. Todos os direitos reservados.</p>
+            <nav class="footer-links">
+                <a href="#">Contato</a>
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/order_history.js"></script>
+</body>
+</html>

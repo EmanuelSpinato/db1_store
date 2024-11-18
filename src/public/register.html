@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/register.css">
+    <title>Registro - DB1 Store</title>
+</head>
+<body>
+    <div class="form-container">
+        <img src="images/logo.jpg" alt="Logo DB1 Store" class="logo mb-4 mx-auto">
+        <h1>Criar Conta na DB1 Store</h1>
+        <form id="registerForm">
+            <h2>Informações Pessoais</h2>
+            <input type="text" placeholder="Nome completo" required id="fullName" class="w-full p-3 mb-4">
+            <input type="email" placeholder="Email" required id="email" class="w-full p-3 mb-4">
+            <input type="tel" placeholder="Telefone" required id="phone" class="w-full p-3 mb-4">
+            
+            <h2>Informações de Segurança</h2>
+            <input type="password" placeholder="Senha" required id="password" class="w-full p-3 mb-4">
+            <input type="password" placeholder="Confirmação de Senha" required id="confirmPassword" class="w-full p-3 mb-4">
+            <label class="flex items-center mb-4">
+                <input type="checkbox" required id="terms" class="mr-2"> Aceito os Termos e Condições
+            </label>
+            <button type="submit">Registrar-se</button>
+            <p>
+                <a href="index.html">Já possui uma conta? Entrar</a>
+            </p>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

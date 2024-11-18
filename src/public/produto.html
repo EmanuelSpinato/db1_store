@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Db1Store</title>
+    <link rel="stylesheet" href="css/product.css">
+    <script src="js/produto.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo Db1Store" class="dashboard-logo">
+            <nav class="dashboard-navbar">
+                <a href="dashboard.html">Início</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="#">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo do Produto -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-content">
+                <!-- Galeria de Imagens -->
+                <div class="product-gallery">
+                    <div class="thumbnail-column">
+                        <img src="images/produto3.jpg" alt="Imagem 1" class="thumbnail" onclick="changeMainImage('images/produto3.jpg')">
+                        <img src="images/produto3.1.jpg" alt="Imagem 2" class="thumbnail" onclick="changeMainImage('images/produto3.1.jpg')">
+                        <img src="images/produto3.3.jpg" alt="Imagem 3" class="thumbnail" onclick="changeMainImage('images/produto3.3.jpg')">
+                        <img src="images/produto3.2.jpg" alt="Imagem 4" class="thumbnail" onclick="changeMainImage('images/produto3.2.jpg')">
+                    </div>
+                    <div class="main-image">
+                        <img id="mainImage" src="images/produto3.jpg" alt="Imagem Principal do Produto">
+                    </div>
+                </div>
+
+                <!-- Informações do Produto -->
+                <div class="product-info">
+                    <!-- Avaliação -->
+                    <div class="product-rating">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">☆</span>
+                        <span class="rating-count">(120 avaliações)</span>
+                    </div>
+                    <h1>Apple iPhone 16 Pro 128GB</h1>
+                    <p class="product-price">R$ 4.200,00</p>
+                    
+                    <!-- Descrição Detalhada -->
+                    <h2>Informações do Produto</h2>
+                    <p class="product-description">
+                        Apple iPhone 16 Pro 128GB Titânio Preto 6,3" 48MP iOS 5G. Com estrutura em titânio, Controle da Câmera, 4K Dolby Vision a 120 qps e o chip A18 Pro. 
+                    </p>
+                    
+                    <div class="product-shipping">
+                        <h3>Forma de Envio</h3>
+                        <select id="shippingOptions" onchange="updateShippingInfo()">
+                            <option value="rápido">Envio Rápido - Prazo de entrega: 2 a 5 dias úteis</option>
+                            <option value="econômico">Envio Econômico - Prazo de entrega: 5 a 10 dias úteis</option>
+                            <option value="expresso">Envio Expresso - Prazo de entrega: 1 a 2 dias úteis</option>
+                        </select>
+                    </div>
+
+                    <div class="product-seller">
+                        <h3>Vendedor</h3>
+                        <p>Loja Oficial Db1Store</p>
+                    </div>
+                    
+                    <!-- Botão de Adicionar ao Carrinho -->
+                    <button class="add-to-cart-button" onclick="addToCart({ name: 'Apple iPhone 16 Pro 128GB', price: 6499.90, image: 'images/produto3.jpg' })">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abas de Comentários e Propostas -->
+    <section class="product-tabs">
+        <div class="tabs-header">
+            <button class="tab-button active" onclick="showTab('comments')">Comentários</button>
+            <button class="tab-button" onclick="showTab('proposals')">Propostas</button>
+        </div>
+        <div id="comments" class="tab-content active">
+            <div class="container">
+                <h2>Comentários sobre o Produto</h2>
+                <div id="commentsList">
+                    <div class="comment">
+                        <p><strong>João:</strong> Ótimo produto, muito rápido e eficiente!</p>
+                        <button class="reply-button" onclick="replyComment(this)">Responder</button>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Maria:</strong> A câmera é excelente, mas achei a bateria um pouco fraca.</p>
+                        <button class="reply-button" onclick="replyComment(this)">Responder</button>
+                    </div>
+                </div>
+                <textarea id="commentInput" placeholder="Digite seu comentário aqui..."></textarea>
+                <button onclick="addComment()">Enviar Comentário</button>
+            </div>
+        </div>
+        <div id="proposals" class="tab-content">
+            <div class="container">
+                <h2>Propostas Enviadas</h2>
+                <div id="proposalsList">
+                    <!-- As propostas serão inseridas aqui dinamicamente -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sugestões de Produtos -->
+    <section class="suggested-products">
+        <div class="container">
+            <h2>Produtos Sugeridos</h2>
+            <div class="suggested-products-list">
+                <a href="produto.html" class="suggested-product-card">
+                    <img src="images/produto1.jpg" alt="Produto Sugerido 1">
+                    <h3>Smart TV 55" 4K</h3>
+                    <p>R$ 2.500,00</p>
+                </a>
+                <a href="produto.html" class="suggested-product-card">
+                    <img src="images/produto2.jpg" alt="Produto Sugerido 2">
+                    <h3>Notebook Core i5</h3>
+                    <p>R$ 3.200,00</p>
+                </a>
+                <a href="produto.html" class="suggested-product-card">
+                    <img src="images/produto16.jpg" alt="Produto Sugerido 3">
+                    <h3>Iphone 15 Pro</h3>
+                    <p>R$ 9.008,00</p>
+                </a>
+                <a href="produto.html" class="suggested-product-card">
+                    <img src="images/produto10.jpg" alt="Produto Sugerido 3">
+                    <h3>PlayStation 5 Slim Branco 1TB + Controle Sem Fio</h3>
+                    <p>R$ 3.799,00</p>
+                </a>
+                <a href="produto.html" class="suggested-product-card">
+                    <img src="images/produto6.jpg" alt="Produto Sugerido 3">
+                    <h3>Apple AirPods 4</h3>
+                    <p>R$ 1.600,00</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Db1Store. Todos os direitos reservados.</p>
+            <nav class="footer-links">
+                <a href="#">Contato</a>
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

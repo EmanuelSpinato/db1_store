@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Endereços - DB1 Store</title>
+    <link rel="stylesheet" href="css/manage_addresses.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo DB1 Store" class="dashboard-logo">
+            <nav class="dashboard-navbar">
+                <a href="dashboard.html">Início</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gerenciamento de Endereços -->
+    <section class="address-management-section">
+        <div class="container">
+            <h2>Gerenciar Endereços</h2>
+
+            <!-- Lista de Endereços -->
+            <div class="address-list">
+                <div class="address-item">
+                    <p><strong>Endereço Principal:</strong> Rua das Flores, 123 - São Paulo, SP</p>
+                    <button class="edit-button" onclick="editAddress()">Editar</button>
+                    <button class="delete-button" onclick="deleteAddress()">Excluir</button>
+                </div>
+                <div class="address-item">
+                    <p><strong>Endereço Secundário:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
+                    <button class="edit-button" onclick="editAddress()">Editar</button>
+                    <button class="delete-button" onclick="deleteAddress()">Excluir</button>
+                </div>
+            </div>
+
+            <!-- Botão para Adicionar Novo Endereço -->
+            <button class="add-address-button" onclick="openAddAddressForm()">Adicionar Novo Endereço</button>
+        </div>
+    </section>
+
+    <!-- Formulário para Adicionar/Editar Endereço -->
+    <section class="address-form-section hidden" id="addressFormSection">
+        <div class="container">
+            <h3 id="formTitle">Adicionar Novo Endereço</h3>
+            <form id="addressForm">
+                <label for="street">Rua</label>
+                <input type="text" id="street" name="street" placeholder="Rua" required>
+
+                <label for="number">Número</label>
+                <input type="text" id="number" name="number" placeholder="Número" required>
+
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city" placeholder="Cidade" required>
+
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state" placeholder="Estado" required>
+
+                <label for="zip">CEP</label>
+                <input type="text" id="zip" name="zip" placeholder="CEP" required>
+
+                <div class="form-buttons">
+                    <button type="button" onclick="saveAddress()">Salvar</button>
+                    <button type="button" onclick="cancelAddressForm()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DB1 Store. Todos os direitos reservados.</p>
+            <nav class="footer-links">
+                <a href="#">Contato</a>
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/manage_addresses.js"></script>
+</body>
+</html>

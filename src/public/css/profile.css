@@ -1,0 +1,137 @@
+/* Reset e Estrutura Básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1em 0;
+}
+
+/* Cabeçalho */
+.dashboard-header {
+    background-color: #0055d4;
+    color: #fff;
+    padding: 1em 0;
+    border-bottom: 3px solid #003a8c;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-logo {
+    width: 150px;
+    height: auto;
+}
+
+.dashboard-navbar {
+    display: flex;
+    gap: 1em;
+}
+
+.dashboard-navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dashboard-navbar a:hover {
+    background-color: #003a8c;
+}
+
+/* Perfil do Usuário */
+.profile-section {
+    padding: 2em 0;
+}
+
+.profile-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #0057d9;
+    margin-bottom: 1em;
+}
+
+.profile-content {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info, .address-management, .payment-methods, .change-password, .order-history {
+    background-color: #f4f4f4;
+    padding: 1.5em;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h3, .address-management h3, .payment-methods h3, .change-password h3, .order-history h3 {
+    color: #0057d9;
+    margin-bottom: 0.5em;
+}
+
+button {
+    background-color: #0057d9;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #003a8c;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 2em;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 0.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+}

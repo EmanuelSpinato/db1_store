@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Db1Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <div class="header-left">
+                <img src="images/logo.png" alt="Logo Db1Store" class="dashboard-logo">
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Buscar produtos..." />
+                    <button onclick="searchProduct()">Buscar</button>
+                </div>
+            </div>
+            <nav class="dashboard-navbar">
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Produtos em Destaque -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Produtos em Destaque</h2>
+            <div class="products">
+                <!-- Produtos simulados com links para a página de detalhes -->
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto1.jpg" alt="Produto 1">
+                    <h3>Smart TV 55" 4K</h3>
+                    <p>R$ 2.500,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto2.jpg" alt="Produto 2">
+                    <h3>Notebook Core i5</h3>
+                    <p>R$ 3.200,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto3.jpg" alt="Produto 3">
+                    <h3>Iphone 15 Pro</h3>
+                    <p>R$ 4.200,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto4.jpg" alt="Produto 4">
+                    <h3>Bicicleta Mountain Bike</h3>
+                    <p>R$ 1.800,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto5.jpg" alt="Produto 5">
+                    <h3>Sofá 3 Lugares</h3>
+                    <p>R$ 1.500,00</p>
+                </a>
+                <!-- Novos produtos adicionados -->
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto6.jpg" alt="Produto 6">
+                    <h3>Apple AirPods 4</h3>
+                    <p>R$ 1.600,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto7.jpg" alt="Produto 7">
+                    <h3>Ar Condicionado LG 9000 BTU Quente/Frio</h3>
+                    <p>R$ 2.599,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto8.jpg" alt="Produto 8">
+                    <h3>Relógio Smart Watch S18 Ultra Pro</h3>
+                    <p>R$ 275,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto9.jpg" alt="Produto 9">
+                    <h3>Cafeteira Elétrica Oster - 19 Cafés</h3>
+                    <p>R$ 240,00</p>
+                </a>
+                <a href="produto.html" class="product-card">
+                    <img src="images/produto10.jpg" alt="Produto 10">
+                    <h3>PlayStation 5 Slim Branco 1TB + Controle Sem Fio</h3>
+                    <p>R$ 3.799,00</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Db1Store. Todos os direitos reservados.</p>
+            <nav class="footer-links">
+                <a href="#">Contato</a>
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

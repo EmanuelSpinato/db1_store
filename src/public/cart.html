@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Db1Store</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo Db1Store" class="dashboard-logo">
+            <nav class="dashboard-navbar">
+                <a href="dashboard.html">Início</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo do Carrinho -->
+    <section class="cart-section">
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <p>Total: <span id="totalPrice">R$ 0,00</span></p>
+                <button class="finalize-button" onclick="finalizePurchase()">Concluir Compra</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animação de Compra Concluída -->
+    <div id="purchaseComplete" class="purchase-complete hidden">
+        <p>Compra Concluída! Obrigado por comprar na Db1Store!</p>
+    </div>
+    <script src="js/cart.js"></script>
+</body>
+</html>

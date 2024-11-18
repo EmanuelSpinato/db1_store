@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - DB1 Store</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo DB1 Store" class="dashboard-logo">
+            <nav class="dashboard-navbar">
+                <a href="dashboard.html">Início</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Perfil do Usuário -->
+    <section class="profile-section">
+        <div class="container">
+            <h2>Meu Perfil</h2>
+            <div class="profile-content">
+                <!-- Informações do Usuário -->
+                <div class="profile-info">
+                    <h3>Informações Pessoais</h3>
+                    <p><strong>Nome:</strong> João da Silva</p>
+                    <p><strong>Email:</strong> joao.silva@email.com</p>
+                    <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                    <button onclick="window.location.href='perfil_usuario.html'">Editar Perfil</button>
+                </div>
+
+                <!-- Gerenciar Endereços -->
+                <div class="address-management">
+                    <h3>Meus Endereços</h3>
+                    <p><strong>Endereço Principal:</strong> Rua das Flores, 123 - São Paulo, SP</p>
+                    <button onclick="window.location.href='manage_addresses.html'">Gerenciar Endereços</button>
+                </div>
+
+                <!-- Formas de Pagamento -->
+                <div class="payment-methods">
+                    <h3>Formas de Pagamento</h3>
+                    <p><strong>Cartão Principal:</strong> Mastercard com final 1234</p>
+                    <button onclick="window.location.href='payment_management.html'">Gerenciar Formas de Pagamento</button>
+                </div>
+
+                <!-- Alterar Senha -->
+                <div class="change-password">
+                    <h3>Segurança</h3>
+                    <button onclick="window.location.href='change_password.html'">Alterar Senha</button>
+                </div>
+
+                <!-- Histórico de Pedidos -->
+                <div class="order-history">
+                    <h3>Histórico de Pedidos</h3>
+                    <p>Último pedido: 25/10/2024</p>
+                    <button onclick="window.location.href='order_history.html'">Ver Todos os Pedidos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DB1 Store. Todos os direitos reservados.</p>
+            <nav class="footer-links">
+                <a href="#">Contato</a>
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

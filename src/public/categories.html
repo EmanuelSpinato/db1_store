@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias - DB1 Store</title>
+    <link rel="stylesheet" href="css/categories.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo DB1 Store" class="dashboard-logo">
+            <nav class="dashboard-navbar">
+                <a href="dashboard.html">Início</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="categories.html">Categorias</a>
+                <a href="cart.html">Carrinho</a>
+                <a href="profile.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu de Categorias -->
+    <section class="categories-section">
+        <div class="container">
+            <h1>Escolha uma Categoria</h1>
+            <div class="categories-list">
+                <button onclick="filterCategory('Eletrônicos')">Eletrônicos</button>
+                <button onclick="filterCategory('Smartphones')">Smartphones</button>
+                <button onclick="filterCategory('Informática')">Informática</button>
+                <button onclick="filterCategory('Móveis')">Móveis</button>
+                <button onclick="filterCategory('Eletrodomésticos')">Eletrodomésticos</button>
+                <button onclick="filterCategory('Esportes')">Esportes</button>
+                <button onclick="filterCategory('Livros')">Livros</button>
+                <button onclick="filterCategory('Moda')">Moda</button>
+                <button onclick="filterCategory('Brinquedos')">Brinquedos</button>
+                <button onclick="filterCategory('Beleza e Saúde')">Beleza e Saúde</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Produtos Filtrados -->
+    <section class="filtered-products" id="filteredProductsSection">
+        <div class="container">
+            <h2 id="categoryTitle">Produtos</h2>
+            <div class="products" id="productsContainer">
+                <!-- Produtos filtrados serão exibidos aqui -->
+            </div>
+        </div>
+    </section>
+
+    <script src="js/categories.js"></script>
+</body>
+</html>
